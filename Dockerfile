@@ -7,11 +7,11 @@ RUN yum -y install java
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page284/pet-shop.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page295/handtime.zip /var/www/html
 WORKDIR /var/www/html/
-RUN unzip pet-shop.zip
-RUN cp -rvf pet-shop-website-template/* .
-RUN rm -rf pet-shop-website-template pet-shop.zip
+RUN unzip handtime.zip
+RUN cp -rvf handtime-html/* .
+RUN rm -rf handtime-html handtime.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
  
